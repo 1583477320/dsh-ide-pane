@@ -1,0 +1,58 @@
+{
+  "name": "dsh-ide-pane",
+  "version": "0.15.0",
+  "description": "A session-aware code pane for the DeepSeek Harness right sidebar: browse, edit and run workspace files, see what the Agent changed, and step through every recorded edit. 代码面板 for DeepSeek Harness。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/smoke.mjs && node test/host.mjs && node test/render.mjs"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "client-plugin",
+    "ide",
+    "code",
+    "editor",
+    "sidebar",
+    "diff"
+  ],
+  "author": "zhuyuelei",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1583477320/dsh-ide-pane.git"
+  },
+  "homepage": "https://github.com/1583477320/dsh-ide-pane#readme",
+  "bugs": {
+    "url": "https://github.com/1583477320/dsh-ide-pane/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}

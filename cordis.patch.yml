@@ -1,0 +1,4 @@
+- insert:
+    - id: dsh-ide-pane
+      name: 'dsh-ide-pane'
+      config: {}
